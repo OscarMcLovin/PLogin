@@ -1,0 +1,9 @@
+<div *ngIf="auth == 'true'"> 
+    <br><br><br>
+    <h1>Acceso Correcto </h1>
+</div>
+<div *ngIf="auth == 'false'"> 
+    <br><br><br>
+    <h1>Acceso Denegado </h1>
+    <h1><a [routerLink]="['/login']">Debes Iniciar Sesion</a> para acceder </h1>
+</div>
