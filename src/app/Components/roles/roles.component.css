@@ -6,7 +6,7 @@
 }
 #cards{
     height: 55px;
-    background: linear-gradient(90deg, #2dc322, #edff4991);  
+    background: linear-gradient(90deg, #c06c96, hsla(325, 71%, 73%, 0.849));  
 }
 #buton{
     height: 40px;

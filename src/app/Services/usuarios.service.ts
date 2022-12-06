@@ -7,7 +7,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 })
 export class UsuariosService {
 
-  url = 'http://localhost:4000';
+  url = 'https://backo-01.herokuapp.com/';
 
   constructor(private http: HttpClient) {}
 
