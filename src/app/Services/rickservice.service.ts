@@ -16,3 +16,4 @@ export class RickserviceService {
     return this.http.get(`${this.url}/character`).toPromise();
     }
 }
+

@@ -1,0 +1,73 @@
+<div *ngIf="rol === '3'">
+    <div class="container">
+      <div *ngFor="let usuario of usuarios">
+  
+        <div *ngIf="usuario._id != id">
+          <div class="card bg-light" *ngIf="usuario.rol == '1'">
+            <h5 class="card-header">Usuario</h5>
+            <button (click)="modificar(usuario)" id="modi" class="btn btn-dark" type="submit">Modificar</button>
+            <div class="card-body">
+              <h2 class="card-title">{{usuario.nombre}} {{usuario.apellidos}}</h2>
+              <p><b>{{usuario.email}}</b></p>
+              <button (click)="acenderUsuario(usuario)" id="but" class="btn btn-success" type="submit">Ascender </button>
+              <button (click)="degradarUsuario(usuario)" id="but2" class="btn btn-danger" type="submit">Degradar</button>
+            </div>
+          </div>
+        </div>
+        
+        <div *ngIf="usuario._id != id">
+          <div class="card text-white bg-info" *ngIf="usuario.rol == '2'">
+            <h5 class="card-header">Usuario nivel 2</h5>
+            <button (click)="modificar(usuario)" id="modi" class="btn btn-dark" type="submit">Modificar</button>
+            <div class="card-body">
+              <h2 class="card-title">{{usuario.nombre}} {{usuario.apellidos}}</h2>
+              <p><b>{{usuario.email}}</b></p>
+              <button (click)="acenderUsuario(usuario)" id="but" class="btn btn-success" type="submit">Ascender </button>
+              <button (click)="degradarUsuario(usuario)" id="but2" class="btn btn-danger" type="submit">Degradar</button>
+            </div>
+          </div>
+        </div>
+  
+        <div *ngIf="usuario._id != id">
+          <div class="card text-white bg-warning" *ngIf="usuario.rol == '3'">
+            <h5 class="card-header">Administrador</h5>
+            <button (click)="modificar(usuario)" id="modi" class="btn btn-dark" type="submit">Modificar</button>
+            <div class="card-body">
+              <h2 class="card-title">{{usuario.nombre}} {{usuario.apellidos}}</h2>
+              <p><b>{{usuario.email}}</b></p>
+              <button (click)="acenderUsuario(usuario)" id="but" class="btn btn-success" type="submit">Ascender </button>
+              <button (click)="degradarUsuario(usuario)" id="but2" class="btn btn-danger" type="submit">Degradar</button>
+            </div>
+          </div>
+        </div>
+  
+        <br>
+  
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="rol != '3'">
+    <h1>Necesitas ser administrador</h1>
+    <h4>Logeate como Admin :)</h4>
+  </div>
+  
+  <div class="barralat" *ngIf="newvista == true">
+    <div class="card" id="carbarra">
+      <button (click)="cerrarVista()" class="btn btn-danger" id="buton" type="submit">X</button>
+      <h2 class="tit">Editar Usuarios</h2>
+        <div class="card-body">
+          <h5 class="card-title" id="tit2">Nombre: {{UsuarioM.nombre}} {{UsuarioM.apellidos}}</h5>
+          <p><b>Correo: {{UsuarioM.email}}</b></p>
+          <input [(ngModel)]="UsuarioM.nombre" type="text" name="nombre" placeholder="Nombre" required>
+          <input [(ngModel)]="UsuarioM.apellidos"type="text" name="apellido" placeholder="Apellido" required>
+          <br>
+          <input [(ngModel)]="UsuarioM.email"type="text" name="email" placeholder="Email" required>
+          <button (click)="mod()" id="botonmod" class="btn btn-warning" type="submit">Modificar</button>
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  

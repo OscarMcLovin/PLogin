@@ -1,0 +1,17 @@
+.cardo{
+    position: relative;
+    left: 10%;
+    height: 75px;
+    
+}
+#cards{
+    height: 55px;
+    background: linear-gradient(90deg, #2dc322, #edff4991);  
+}
+#buton{
+    height: 40px;
+    width: 150px;
+    position: relative;
+    left: 82%;
+    top: -38px;
+}
